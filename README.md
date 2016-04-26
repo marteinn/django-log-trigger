@@ -1,6 +1,72 @@
 # Django-Log-Trigger
 
-A django app for simulating exceptions and logging calls of various levels.
+A django app for simulating exceptions and logging calls of various levels through http. Its perfect when you want to try out your LOGGING settings.
+
+
+## Installing
+
+### Stable
+
+`pip install django-log-trigger`
+
+### Develop
+
+`pip install git+git://github.com/marteinn/django-log-trigger.git@develop`
+
+
+## Getting started
+
+1. Add `log_trigger` to installed apps
+
+    ```
+    INSTALLED_APPS = [
+        'pages',
+        'pizza',
+        
+        'log_trigger',
+    ]
+    ```
+
+2. Add `log_trigger.urls` to your `urls.py`
+
+    ```
+    import log_trigger
+
+    urlpatterns = [
+        url(r'^api/', include('api.urls')),
+        url(r'^log-trigger/', include(log_trigger.urls)),
+        ...
+    ```
+3. Done!
+
+
+## Usage
+
+Open your browser and visit any of these urls.
+
+### Exceptions
+- `/log-trigger/system-exception/`: Trigger system exception
+- `/log-trigger/unhandled-exception/`: Trigger unhandled exception
+
+### Logging
+- `/log-trigger/debug-logging/`: Debug logging
+- `/log-trigger/info-logging/`: Info logging
+- `/log-trigger/warn-logging/`: Warn logging
+- `/log-trigger/error-logging/`: Error logging
+- `/log-trigger/critical-logging/`: Critical logging
+
+
+## Configuration
+
+### `LOG_TRIGGER_LOGGER_NAME`
+Default: `log_trigger.views`
+
+The logger you want to use when testing the logging endpoints.
+
+### `LOG_TRIGGER_SECRET`
+Default: Empty
+
+Use the param if you want to secure your testing endpoints, the secret are passed along as a get variable. Example: `/debug-logging/?secret=mysecret`
 
 
 ## Contributing
