@@ -1,0 +1,10 @@
+# Virtualenv
+venv/
+
+# Python specific, Byte-compiled / optimized / DLL files
+*.pyc
+__pycache__/
+*.py[cod]
+
+dist
+*.egg-info
