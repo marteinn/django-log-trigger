@@ -35,7 +35,7 @@ except:
 setup(
     name="django-log-trigger",
     version=log_trigger.__version__,
-    description=(""),
+    description=("Simulate exceptions and logging calls in django through http"),  # NOQA
     long_description=long_description,
     author="Martin Sandström",
     author_email="martin@marteinn.se",
@@ -58,7 +58,7 @@ setup(
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.2",
         "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4"
+        "Programming Language :: Python :: 3.4",
         'Framework :: Django',
         'Topic :: Utilities',
     ),
