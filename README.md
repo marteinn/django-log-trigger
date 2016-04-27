@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/marteinn/django-log-trigger.svg?branch=master)](https://travis-ci.org/marteinn/django-log-trigger)
+[![PyPI version](https://badge.fury.io/py/django-log-trigger.svg)](http://badge.fury.io/py/django-log-trigger)
+
 # Django-Log-Trigger
 
 A django app for simulating exceptions and logging calls of various levels through http. Its perfect when you want to try out your LOGGING settings.
@@ -22,7 +25,7 @@ A django app for simulating exceptions and logging calls of various levels throu
     INSTALLED_APPS = [
         'pages',
         'pizza',
-        
+        ...
         'log_trigger',
     ]
     ```
