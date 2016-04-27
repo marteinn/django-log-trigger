@@ -6,6 +6,12 @@
 A django app for simulating exceptions and logging calls of various levels through http. Its perfect when you want to try out your LOGGING settings.
 
 
+## Requirements
+
+- Python 2.7+/3.5+
+- Django 1.8+
+
+
 ## Installing
 
 ### Stable
