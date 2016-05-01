@@ -56,6 +56,7 @@ Open your browser and visit any of these urls.
 ### Exceptions
 - `/log-trigger/system-exception/`: Trigger system exception
 - `/log-trigger/unhandled-exception/`: Trigger unhandled exception
+- `/log-trigger/disallowed-host-exception/`: Trigger disallowed exception
 
 ### Logging
 - `/log-trigger/debug-logging/`: Debug logging
