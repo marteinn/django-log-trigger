@@ -10,6 +10,9 @@ urlpatterns = [
     url(r'^unhandled-exception/', views.unhandled_exception_view,
         name='unhandled_exception_view'),
 
+    url(r'^disallowed-host-exception', views.disallowed_host_exception_view,
+        name='disallowed_host_exception_view'),
+
     url(r'^debug-logging/', views.logger_debug_view,
         name='logger_debug_view'),
 
