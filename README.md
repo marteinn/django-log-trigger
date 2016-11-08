@@ -21,7 +21,7 @@ A django app for simulating exceptions and logging calls of various levels throu
 
 1. Add `log_trigger` to installed apps
 
-    ```
+    ```python
     INSTALLED_APPS = [
         'pages',
         'pizza',
@@ -32,7 +32,7 @@ A django app for simulating exceptions and logging calls of various levels throu
 
 2. Add `log_trigger.urls` to your `urls.py`
 
-    ```
+    ```python
     import log_trigger
 
     urlpatterns = [
