@@ -6,6 +6,12 @@
 A django app for simulating exceptions and logging calls of various levels through http. Its perfect when you want to try out your LOGGING settings.
 
 
+## Requirements
+
+- Python 2.7+/3.5+
+- Django 1.8+
+
+
 ## Installing
 
 ### Stable
@@ -50,6 +56,7 @@ Open your browser and visit any of these urls.
 ### Exceptions
 - `/log-trigger/system-exception/`: Trigger system exception
 - `/log-trigger/unhandled-exception/`: Trigger unhandled exception
+- `/log-trigger/disallowed-host-exception/`: Trigger disallowed exception
 
 ### Logging
 - `/log-trigger/debug-logging/`: Debug logging

@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.core.exceptions import DisallowedHost
 
 from log_trigger.helpers import get_logger, validate_secret
 
@@ -20,11 +21,18 @@ def unhandled_exception_view(request):
     raise Exception('Unhandled Exception')
 
 
+def disallowed_host_exception_view(request):
+    if not validate_secret(request):
+        return unauthorized_response
+
+    raise DisallowedHost('DisallowedHost Exception')
+
+
 def logger_debug_view(request):
     if not validate_secret(request):
         return unauthorized_response
 
-    get_logger().error('Debug message')
+    get_logger().debug('Debug message')
     return HttpResponse('Debug message')
 
 
@@ -56,5 +64,5 @@ def logger_critical_view(request):
     if not validate_secret(request):
         return unauthorized_response
 
-    get_logger().error('Critical message')
+    get_logger().critical('Critical message')
     return HttpResponse('Critical message')
