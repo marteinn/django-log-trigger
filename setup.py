@@ -44,7 +44,7 @@ setup(
     tests_require=tests_require,
     license="MIT",
     zip_safe=False,
-    classifiers=(
+    classifiers=[
         "Development Status :: 4 - Beta",
         'Environment :: Web Environment',
         "Intended Audience :: Developers",
@@ -59,5 +59,5 @@ setup(
         "Programming Language :: Python :: 3.4",
         'Framework :: Django',
         'Topic :: Utilities',
-    ),
+    ],
 )
