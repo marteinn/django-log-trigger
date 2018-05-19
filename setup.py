@@ -3,10 +3,8 @@
 
 import os
 import sys
-import pip
 
 from setuptools import setup, find_packages
-from pip.req import parse_requirements
 
 import log_trigger
 
@@ -16,13 +14,13 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 # Handle requirements
-requires = parse_requirements("requirements/install.txt",
-                              session=pip.download.PipSession())
-install_requires = [str(ir.req) for ir in requires]
+install_requires = [
+    'Django>=1.6'
+]
 
-requires = parse_requirements("requirements/tests.txt",
-                              session=pip.download.PipSession())
-tests_require = [str(ir.req) for ir in requires]
+tests_require = [
+    'Django>=1.6'
+]
 
 # Convert markdown to rst
 try:
